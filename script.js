@@ -3,6 +3,7 @@ const myLibrary = [];
 const container = document.querySelector('.container');
 const shelves = document.querySelector('.shelves');
 let currentShelf = shelves.firstElementChild;
+const btn = document.querySelector('.submit-button');
 
 function Book(author, title, pages) {
   this.author = author;
@@ -10,6 +11,8 @@ function Book(author, title, pages) {
   this.pages = pages;
   //We might want to have a some additional attributes for styling later.
 }
+
+
 
 function addBookToLibrary() {
   // do stuff here
@@ -23,3 +26,8 @@ function addBookToLibrary() {
 function expandbookShelves(){
 
 }
+
+//Button stuff
+btn.addEventListener('click', () => {
+  addBookToLibrary();
+});
