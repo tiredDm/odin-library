@@ -10,11 +10,11 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <form method="post" class="form">
+            <form method="post" class="form" onsubmit="return false">
                 <h1>Library</h1>
                 <div class="form-input">
                     <label for="Author">Author:</label>
-                    <input type="text" id="Author">
+                    <input type="text" id="Author" >
                 </div>
                 <div class="form-input">
                     <label for="Title">Title:</label>
@@ -25,13 +25,13 @@
                     <input type="number" id="Pages" name="Pages">
                 </div>
 
-                <button class="submit-button" type="button">Submit</button>
+                <button class="submit-button" type="submit">Submit</button>
             </form>
         </div>
         <div class="books-section">
             <div class="shelves">
                 <div class="shelf">
-                    <div class="book"></div>
+                    <div class="book">Eragon</div>
                     <div class="book"></div>
                 </div>
                 <div class="top shelf">

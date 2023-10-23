@@ -97,5 +97,14 @@ body{
     width: 2rem;
     background-color: skyblue;
     box-shadow:  20px 0px rgba(77, 47, 60, .4);
+
+    /*Title or Text related Styles*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    writing-mode: tb-rl;
+    font-size: x-large;
+    color: white;
 }
 
