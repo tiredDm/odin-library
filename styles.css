@@ -12,15 +12,46 @@ body{
     
 }
 
+/* FORM SECTION */
 .sidebar{
     background-color: white;
+    display:flex;
+    justify-content: center;
 }
+
 
 /*-- We may want to make the form on the sidebar have it's postiioning as fixed so that it doesn't move when we scroll up*/
-.sidebar-form{
-    
+.form{
+    display: flex;
+    flex-direction: column;   
+    padding: 40px;
+    gap: 40px;
+    font-size: x-large;
 }
 
+.form-input{
+    display: flex;
+    gap: 3px;
+}
+
+.form input{
+    border: 0px dotted black;
+    border-bottom: 3px dotted black;
+    flex-grow: 2;
+}
+
+.form .submit-button{
+    background-color: skyblue;
+    color: white;
+    font-size: xx-large;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.form h1{
+    margin-bottom: 0px;
+}
+/*-- Books Section --*/
 
 .books-section{
     display: flex;
@@ -67,3 +98,4 @@ body{
     background-color: skyblue;
     box-shadow:  20px 0px rgba(77, 47, 60, .4);
 }
+
