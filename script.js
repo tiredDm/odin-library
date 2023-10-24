@@ -25,13 +25,13 @@ function addBookToLibrary() {
     pages.value = 100;
   }
 
-  console.log(author.value + ',' + title.value + ',' + pages.value) ;
+  //console.log(author.value + ',' + title.value + ',' + pages.value) ;
 
 
   //CREATE OBJECT
+  let newBookObject = new Book(author.value, title.value, pages.value);
 
-
-  //DO ALL THE STUFF
+  //DO ALL THE STUFF related to the DOM
   let newBook = document.createElement('div');
   newBook.classList.add('book');
   let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -40,12 +40,20 @@ function addBookToLibrary() {
   newBook.style.backgroundColor = randomColor;
   newBook.style.width = width; // Page contributes to this..
   newBook.style.height = height;
+  newBook.innerHTML = title.value;
 
+  //ADD BOOK TO SHELF LOGIC
   currentShelf.appendChild(newBook);
-  //  myLibrary.push(newBook)
+
+
+  //ADD THE BOOK TO THE OBJECT ARRAY
+  
+  myLibrary.push(newBookObject)
 
   //CLEAR ALL THE FORM VALUES 
-
+  title.value = '';
+  author.value = '';
+  pages.value = '';
 
 }
 
@@ -61,9 +69,11 @@ btn.addEventListener('click', () => {
 
 /* 
 Check List...
-1. Object to Style -> take object properties and put them into the style..
-  1a. What are the Styles we want... Width of the book, Colour, Height, Pattern, Title Font. 
-2. take form inputs and read them into the object
+1.+ Object to Style -> take object properties and put them into the style..
+  1a.+ What are the Styles we want... Width of the book, Colour, Height, Pattern, Title Font. 
+2.+ take form inputs and read them into the object
+  2a. Add Title onto the book 
+  2ab.Hide run off with title.
 3. Validate Form Inputs (If in the Odin Project)
 4. Implement Move Row and Expand bookShelves..
 */
