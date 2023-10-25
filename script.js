@@ -45,9 +45,17 @@ function addBookToLibrary() {
   //ADD BOOK TO SHELF LOGIC
   currentShelf.appendChild(newBook);
 
+  //REMOVEBOOK BUTTON
+  let removeButton = document.createElement('div');
+  removeButton.classList.add('remove-book');
+  removeButton.innerHTML = 'X';
+  newBook.appendChild(removeButton);
+  removeButton.addEventListener('click', () => {
+    deleteBook(removeButton.parentElement, newBookObject);
+  });
+
 
   //ADD THE BOOK TO THE OBJECT ARRAY
-  
   myLibrary.push(newBookObject)
 
   //CLEAR ALL THE FORM VALUES 
@@ -59,6 +67,18 @@ function addBookToLibrary() {
 
 function expandbookShelves(){
 
+}
+
+function deleteBook(book, bookObject){
+  //DOM STUFF
+  currentShelf.removeChild(book);
+
+  //OBJECT STUFF
+  let index = myLibrary.indexOf(bookObject);
+  console.log(index);
+  if (index > -1) { // only splice array when item is found
+    myLibrary.splice(index, 1); // 2nd parameter means remove one item only
+  }
 }
 
 //Button stuff

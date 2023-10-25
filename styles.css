@@ -108,3 +108,18 @@ body{
     color: white;
 }
 
+
+.remove-book{
+    display:none;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    writing-mode:horizontal-tb;
+    z-index: 5;
+}
+
+.book:hover > .remove-book{
+    display:inline-block;
+} 
+
