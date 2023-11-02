@@ -5,11 +5,23 @@ const shelves = document.querySelector('.shelves');
 let currentShelf = shelves.firstElementChild;
 const btn = document.querySelector('.submit-button');
 
+/*
+//ORIGINAL BOOK OBJECT FUNCTION
 function Book(author, title, pages) {
   this.author = author;
   this.title = title;
   this.pages = pages;
   //We might want to have a some additional attributes for styling later.
+}
+ */
+
+//BOOK CLASS
+class Book {
+  constructor(author, title, pages) {
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+  }
 }
 
 
